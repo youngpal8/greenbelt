@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenBelt</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            margin: 0;
+        }
+        .hero {
+            background-image: url(images/comeb.jpg);
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 150vh;
+            position: relative;
+            top: 0;
+            left: 0;
+            background-position: center;
+            background-size: cover;
+            overflow: hidden;
+        }
+        .hero .overlay{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+        .navbar {
+            margin: 0;
+            padding: 15px;
+            position: fixed;
+        }
+        .nav-active {
+        background-color:#2c2727;
+        box-shadow: 20px -1px 12px -5px grey;
+        width: 100% !important;
+        z-index: 1000;
+        
+        }
+       
+        .navbar li{
+            display: inline;
+            list-style-type: none;
+            padding: 15px;
+
+        }
+        .navbar li a{
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        span {
+            display: none;
+        }
+      .mouse:hover span {
+        display: inline;
+      }
+      .minister {
+        font-size: 100px;
+        color: rgb(53, 48, 48);
+        font-family: cursive 'Courier New', Courier, monospace; 
+        }
+      .amen {
+        margin-top: -100px;
+        color: rgb(53, 48, 48);
+      }
+      .taiwo {
+        margin-left: 120px; 
+        display: flex; 
+        justify-content: space-between; 
+        max-width: 50px; 
+        max-height: 50px;
+        column-gap: 15px;
+        position: relative;
+        margin-top: -45px;
+      }
+      table {
+        margin-left: 15px;
+        margin-top: 10px;
+        cursor: pointer;
+        line-height: 0.8;
+        table-layout: fixed;
+        width: 70%;
+        text-align: left;
+      }
+      .book {
+        background-color: #2c2727; 
+        width: 100px; 
+        border-radius: 100px; 
+        border-width: 0.1px; 
+        height: 40px; 
+        margin-left: 15px;
+        margin-top: 10px;
+      }
+      .rooms {
+        font-size: 22px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-weight: lighter;
+        color: rgb(82, 76, 76);
+        margin-top: -5px;
+      }
+      .dspec {
+        position: absolute;
+        transition: all ease-out 1.2s;
+        opacity: 0;
+        will-change: bottom;
+        bottom: 0;
+      }
+      .delux:hover .dspec {
+        opacity: 1;
+        transform: translateY(100%);
+        bottom: 100%;
+       
+        
+        
+      }
+      .touch {
+        display: flex;
+        justify-content: space-between;
+        column-gap: 0;
+      }
+      .location {
+        height: 800px;
+        width: 640px;
+      }
+      
+      input {
+        width: 450px;
+        height: 35px;
+        border-radius: 5px;
+        border-width: 0.1px;
+        line-height: 1;
+        font-size: 15px;
+        margin-top: 20px;
+        color: rgb(82, 76, 76);
+        
+      }
+      label {
+        position: absolute;
+        font-size: 15px;
+        margin-top: 15px;
+        color: rgb(82, 76, 76);
+        font-family: sans-serif;
+        font-weight: lighter;
+      }
+      textarea {
+        margin-top: 15px;
+        width: 450px;
+        height: 35px;
+        border-radius: 5px;
+        font-family: sans-serif;
+        font-size: 15px;
+        color: rgb(82, 76, 76);
+      }
+      .news {
+        max-width:750px ;
+        border:solid rgb(202, 186, 186);
+        border-width: 0.1px;
+        margin-left: 300px;
+        height: 160px;
+      }
+
+    ::placeholder {
+        text-align: justify;
+      }
+      
+
+    
+
+      
+    </style>
+</head>
+<body>
+   
+   <section class="hero">
+     <ul class="navbar">
+        <li><a href="index.html"><img src="images/greenbelthotellogo.jpg" alt=""></a></li>
+        <li><a href="index.html" style="margin-left: 600px;">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Rooms</a></li>
+        <li><a href="#">Book a Room</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    <div class="overlay"></div>
+    <div class="content1" style="margin-top: 130px; margin-left: 100px; max-width: 230px;">
+        <p style="color: white; font-size: 15px; font-family: sans-serif; font-weight: lighter;"> Best Hotel With Cozy Rooms </p>
+    </div>
+    <div class="content2" style="margin-top: -65px; margin-left: 100px; max-width: 700px;">
+        <p style="color: white; font-size: 90px;">Just Experience A New Level Of Luxury. </p>
+    </div>
+    <div style="margin-left: 100px; margin-top:-40px; position: relative; max-width: 700px;">
+        <button style="border-width: 1px; border-color:white; padding: 10px; border-radius: 105px; width: 230px; background-color: transparent;"><a style="text-decoration: none;" href=""><p class="mouse" style="color: white; text-decoration: none; cursor: pointer; transition: all 0.5s ease-in-out; margin-left: -25px; padding: -10px; font-size: 15px; text-align: center;">Explore Rooms <span style="transition: all 1.5s ease-in;">&#8594;</span></p></a></button>
+    </div>
+
+   </section>
+   <section>
+    <div>
+        <p style="font-size: 50px; max-width: 850px; text-align: center; color: rgb(53, 48, 48); margin-left: 220px; margin-top: 120px;">Welcome to Greenbelt Hotels and Suites - Your Oasis of Comfort in the Heart of Lagos!</p>
+    </div>
+    <div>
+        <p style="margin-top: -40px; font-size: 20px;font-weight: lighter; color: rgb(53, 48, 48); max-width: 850px; text-align: center; margin-left: 220px;">At Greenbelt Hotels and Suites, we take pride in offering you a unique blend of luxury, convenience, and relaxation. Located at 5 Mathew Street off Ogba Road, Agege, via Ikeja in Lagos, our establishment is your ideal destination for a memorable stay, delicious dining experiences, and a vibrant bar scene.</p>
+    </div>
+    <div>
+        <button style="margin-left: 550px; border-width: 1px; border-color: black; padding-left: 24px; border-radius: 115px; width: 170px; height: 60px; background-color: transparent;"><a style="text-decoration: none;" href="#"><p class="mouse" style="color:rgb(53, 48, 48); text-decoration: none; cursor: pointer; transition: all 0.5s ease-in-out; margin-left: -25px; padding: -10px; font-size: 15px; text-align: center;">Read More <span class="sword" style="transition: all 1.5s ease-in;">&#8594;</span></p></a></button>
+        
+    </div>
+   </section>
+   <section style="margin-top: 120px;">
+    <div style="background-color: rgb(248, 241, 241); max-width: 100%; height:450px;">
+        <div><img style="width: 620px;" height="450px" src="images/dinning2.jpg" alt=""></div>
+        <div style="max-width: 400px; position: absolute; margin-top: -480px; margin-left: 800px; height: 410px;" >
+            <p style="font-size: 45px; color: rgb(82, 76, 76);">Dinning</p>
+            <p style="margin-top: -35px; font-size: 15px; line-height: 1.8; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">The dining facility at Greenbelt Hotel offers a delightful culinary experience that caters to every palate. With a diverse menu featuring both local and international cuisine, guests can savor exquisite dishes prepared by skilled chefs. The elegant ambiance and attentive service create the perfect atmosphere for a memorable dining experience. Whether you're enjoying a leisurely breakfast, a business lunch, or a romantic dinner, Greenbelt Hotel's dining facility ensures a taste of culinary excellence in every bite.</p>
+            <button style="border-width: 0.1px; border-color: black; width: 170px; border-radius: 115px; height: 60px; background-color: transparent;"><a style="text-decoration: none;" href=""><p class="mouse" style="color: rgb(20, 19, 19); font-size: 18px;">Contact Us <span class="sword">&#8594</span></p></a></button>
+        </div>
+
+    </div>
+   </section>
+
+   <section style="margin-top: 150px;">
+    <div style="max-width: 550px; margin-left: 120px;">
+        <p style="font-size: 45px; color: rgb(20, 19, 19); font-weight: lighter; font-family:'Times New Roman', Times, serif;">Our Achievements</p>
+        <p style="font-size: 15px;margin-top: -30px; color: rgb(53, 48, 48); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">We are the top leading hotel with 12 years of experiences.</p>
+    </div>
+    <div style="display: flex; justify-content: space-between; max-width: 70%; margin-left: 120px; margin-top: -100px;">
+        <div>
+            <p class="minister">25k</p>
+            <p class="amen">Happy clients</p>
+        </div>
+        <div>
+            <p class="minister">17</p>
+            <p class="amen">Total Rooms</p>
+        </div>
+        <div>
+            <p class="minister">6</p>
+            <p class="amen">Awards Won</p>
+        </div>
+        <div>
+            <p class="minister">15</p>
+            <p class="amen">Team Members</p>
+        </div>
+    </div>
+   </section>
+
+   <section style="margin-top: 150px;">
+    <div style="margin-left: 120px;">
+        <p style="font-size: 45px; color: rgb(53, 48, 48);">Explore Our Rooms</p>
+    </div>
+
+
+    <section class="taiwo">
+        <div class="delux">
+            <img height="300px" width="380px" src="images/Untitled.jpg" alt="">
+            <p class="rooms">Deluxe Rooms</p>
+            <div class="dspec" style="margin-top: -347px; margin-left: 0; background-color: rgb(247, 240, 240); height: 300px; width: 380px; position: absolute;">
+                <table>
+                    <tr>
+                        <td style="font-weight: bold;">Size:</td>
+                        <td style="color: rgb(53, 48, 48);">10ft</td>
+                    </tr>
+                   </table>
+                   <table>
+                    <tr>
+                        <td style="font-weight: bold;">Capacity:</td>
+                        <td style="color: rgb(53, 48, 48);">Max person 2</td>
+                    </tr>
+                   </table>
+                   <table>
+                    <tr>
+                        <td style="font-weight: bold;">Bed:</td>
+                        <td style="color: rgb(53, 48, 48);">Normal bed</td>
+                    </tr>
+                   </table>
+                   <table>
+                    <tr>
+                        <td style="font-weight: bold;">Service:</td>
+                        <td style="color: rgb(53, 48, 48);">Wifi, Television, Bathroom...</td>
+                    </tr>
+                   </table>
+                    <button class="book"><a style="text-decoration: none; color: white;" href="#">Book</a></button>
+            </div>
+        </div>
+        <div class="delux" style="position: relative; display: inline-block;">
+            <img style="position: relative;" height="300px" width="380px" src="images/Untitled 1.jpg" alt="">
+            <p class="rooms">Deluxe Double Rooms</p>
+            <div class="dspec" style="margin-top: -347px; margin-left: 0; background-color: rgb(247, 240, 240); height: 300px; width: 380px; position: absolute;">
+                <table>
+                    <tr>
+                        <td style="font-weight: bold;">Size:</td>
+                        <td style="color: rgb(53, 48, 48);">10ft</td>
+                    </tr>
+                   </table>
+                   <table>
+                    <tr>
+                        <td style="font-weight: bold;">Capacity:</td>
+                        <td style="color: rgb(53, 48, 48);">Max person 2</td>
+                    </tr>
+                   </table>
+                   <table>
+                    <tr>
+                        <td style="font-weight: bold;">Bed:</td>
+                        <td style="color: rgb(53, 48, 48);">Normal bed</td>
+                    </tr>
+                   </table>
+                   <table>
+                    <tr>
+                        <td style="font-weight: bold;">Service:</td>
+                        <td style="color: rgb(53, 48, 48);">Wifi, Television, Bathroom...</td>
+                    </tr>
+                   </table>
+                    <button class="book"><a style="text-decoration: none; color: white;" href="#">Book</a></button>
+            </div>
+        </div>
+        <div class="delux" style="position: relative; display: inline-block;">
+            <img style="position: relative;" height="300px" width="380px" src="images/Untitled 2.jpg" alt="">
+            <p class="rooms">Royal Executive Rooms</p>
+            <div class="dspec" style="margin-top: -347px; margin-left: 0; background-color: rgb(247, 240, 240); height: 300px; width: 380px; position: absolute;">
+                <table>
+                    <tr>
+                        <td style="font-weight: bold;">Size:</td>
+                        <td style="color: rgb(53, 48, 48);">10ft</td>
+                    </tr>
+                   </table>
+                   <table>
+                    <tr>
+                        <td style="font-weight: bold;">Capacity:</td>
+                        <td style="color: rgb(53, 48, 48);">Max person 2</td>
+                    </tr>
+                   </table>
+                   <table>
+                    <tr>
+                        <td style="font-weight: bold;">Bed:</td>
+                        <td style="color: rgb(53, 48, 48);">Normal bed</td>
+                    </tr>
+                   </table>
+                   <table>
+                    <tr>
+                        <td style="font-weight: bold;">Service:</td>
+                        <td style="color: rgb(53, 48, 48);">Wifi, Television, Bathroom...</td>
+                    </tr>
+                   </table>
+                    <button class="book"><a style="text-decoration: none; color: white;" href="#">Book</a></button>
+            </div>
+        </div>
+    </section>
+    
+    <section class="touch" style="height: 800px; width: 100%; position: relative; margin-top: 500px;">
+        <div style="background-color: rgb(248, 241, 241);  width: 50%;">
+            <p style="font-size: 32px; margin-left: 100px; margin-top: 185px; font-weight: lighter; color: rgb(82, 76, 76); font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Get In Touch <br> Contact Us</p>
+            <form action="" style="margin-top: -18px; margin-left: 100px;">
+                <label for="name">Name</label> <br>
+                <input type="text" placeholder="Your name"><br>
+                <label for="email">Email</label><br>
+                <input type="text" placeholder="Your Email"> <br>
+                <label for="Pnumber">Phone Number</label> <br>
+                <input type="text" placeholder="Your Phone Number"> <br>
+                <label for="message">Message</label><br>
+                <textarea name="Your message" id="message">Your message</textarea><br>
+                <input style="width: 18%; background-color: black; color: white;" type="Submit" value="Submit">
+
+            </form>
+            <p style="margin-left: 100px; font-size: 18px; color: rgb(82, 76, 76);">Guest Complaint: <br> md@greenbeltsuites.com</p>
+            
+        </div>
+        <div style="margin-left: 670px; position: absolute; height: 800px;">
+            <iframe class="location"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.235354423595!2d3.3292533749937574!3d6.617656393376495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b912945f83047%3A0xc4a605549cfc05ee!2sGreenbelt%20Hotel%20%26%20Suites!5e0!3m2!1sen!2sng!4v1718884805778!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        >
+        
+    </section>
+
+    <section style="margin-top: 100px;">
+        <p style="margin-left: 500px; font-size: 40px; color: rgb(82, 76, 76);">Join Our Newsletter</p>
+        <p style="margin-left: 400px; margin-top: -30px; font-size: 18px; color: rgb(82, 76, 76);">Sign up to our newsletter to receive our latest news about offers & promotions.</p>
+        <div class="news">
+            <p style="text-align: center; color: rgb(82, 76, 76);">Email address</p>
+            <input style="width: 95%; margin-left: 15px; margin-top: -3px;" type="text" name="email adress" id="" placeholder="Enter Your Email">
+            <input style="margin-left: 320px; width: 15%; background-color: black; color: white;" type="submit" value="Subscribe">
+        </div>
+    </section>
+
+    <section style="background-color: rgb(248, 241, 241); margin-top: 120px; max-width: 100%; height: 400px;">
+        <div style="display: flex; margin-left: 100px;">
+            <div style="max-width: 260px; margin-top: 100px;">
+                <p style="font-size: 28px; color: rgb(82, 76, 76);">About Us</p>
+                <p style="color: rgb(82, 76, 76); font-size: 16px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">The dining facility at Greenbelt Hotel offers a delightful culinary experience that caters to every palate.</p>
+            </div>
+            <div style="max-width: 260px; margin-top: 100px; margin-left: 85px; height: 100px;">
+                <p style="font-size: 28px; color: rgb(82, 76, 76);">Quick Link</p>
+                <div style="line-height: 2;">
+                <a style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-decoration: none; color: rgb(82, 76, 76); font-size: 16px;" href="#">About</a> <br>
+                <a style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-decoration: none; color: rgb(82, 76, 76); font-size: 16px;" href="#">Rooms</a> <br>
+                <a style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-decoration: none; color: rgb(82, 76, 76); font-size: 16px;" href="#">Book a Room</a> <br>
+                <a style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-decoration: none; color: rgb(82, 76, 76); font-size: 16px;" href="#">Contact</a>
+                </div>
+            </div>
+            <div style="max-width: 260px; margin-left: 85px; margin-top: 100px;">
+                <p style="font-size: 28px; color: rgb(82, 76, 76);">Contact</p>
+                <p style="font-size: 16px; color: rgb(82, 76, 76); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">5 Mathew Street off Ogba Road, Agege via Ikeja Lagos</p>
+                <p style="font-size: 16px; color: rgb(82, 76, 76); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">+2347051550000 </p>
+                <p style="font-size: 16px; color: rgb(82, 76, 76); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">greenbelthotel2022@gmail.com</p>
+            </div>
+            <div style="max-width: 260px; margin-left: 70px; margin-top: 100px;">
+                <p style="font-size: 28px; color: rgb(82, 76, 76);">Follow Us On Social Media</p>
+                <div style="display: flex; column-gap: 25px;">
+                    <a style="border:solid rgb(82, 76, 76); border-width: 0.1px; padding: 10px; height: 40px; width: 18%;" href="#"><i style="margin-top: 5px; margin-left: 0px; color: rgb(82, 76, 76);" class="fa fa-facebook-official fa-2x" aria-hidden="true" fa></i></a>
+                    <a style="border:solid rgb(82, 76, 76); border-width: 0.1px; padding: 10px; height: 40px; width: 15%;" href="#"><i style="margin-top: 5px; margin-left: 0px; color: rgb(82, 76, 76);" class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+                    <a style="border:solid rgb(82, 76, 76); border-width: 0.1px; padding: 10px; height: 40px; width: 15%;" href="#"><i style="margin-top: 5px; margin-left: 0px; color: rgb(82, 76, 76);" class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+                    <a style="border:solid rgb(82, 76, 76); border-width: 0.1px; padding: 10px; height: 40px; width: 15%;" href="#"><i style="margin-top: 5px; margin-left: 0px; color: rgb(82, 76, 76);" class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+            </div>
+            </div>
+        </div>
+
+    </section>
+    <a style="position: fixed; z-index: 3000; bottom: 20px; right: 75px;" href="#"><i style="color: green; margin-left: 95%;" class="fa fa-whatsapp fa-2x" aria-hidden="true"></i></a>
+   
+
+   <script src="js/greenbet.js"></script>
+</body>
+</html>                                                                                                                                                             
